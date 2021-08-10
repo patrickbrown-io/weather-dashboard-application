@@ -21,6 +21,9 @@ let searchEl
 $("#citySearchBtn").on('click', function(){
     event.preventDefault();
     var searchEl = $("#searchInput").val()
+
+    $('#search-history').append('<button id=history-button>'+searchEl+"</button>")
+
 fetch('https://api.openweathermap.org/data/2.5/forecast?q='+searchEl+'&units=imperial&cnt=40&appid=eabfc1685d3a5a1ea93166e8b31eb771')
     .then(function (response){
         return response.json();
