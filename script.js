@@ -59,7 +59,7 @@ fetch('https://api.openweathermap.org/data/2.5/forecast?q='+searchEl+'&units=imp
         $("#humidity0").text("Humidity: "+data.list[0].main.humidity)
         $("#wind0").text("Wind Speed: "+ data.list[0].main.humidity+" mpg")
 
-        $("#uvi0").text("UV Index: "+ data.list[0].)
+        // $("#uvi0").text("UV Index: "+ data.list[0].)
         
         /////DAY 1
         $("#day1Img").attr("src","http://openweathermap.org/img/wn/"+data.list[8].weather[0].icon+".png")
@@ -87,5 +87,4 @@ fetch('https://api.openweathermap.org/data/2.5/forecast?q='+searchEl+'&units=imp
         $("#wind4").text("Wind Speed: "+ data.list[32].main.humidity+" mpg")        
 
     })
-
 });
