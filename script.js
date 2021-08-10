@@ -27,7 +27,7 @@ fetch('https://api.openweathermap.org/data/2.5/forecast?q='+searchEl+'&units=imp
     })
 
     .then(function (data){
-        // console.log(data);
+        console.log(data);
         // ///if statement for i down there
         // //////////DAY 0
         // console.log("Day 0----------------------------")
@@ -58,6 +58,9 @@ fetch('https://api.openweathermap.org/data/2.5/forecast?q='+searchEl+'&units=imp
         $("#temperature0").text("Temperature: "+ data.list[0].main.temp+"F")
         $("#humidity0").text("Humidity: "+data.list[0].main.humidity)
         $("#wind0").text("Wind Speed: "+ data.list[0].main.humidity+" mpg")
+
+        $("#uvi0").text("UV Index: "+ data.list[0].)
+        
         /////DAY 1
         $("#day1Img").attr("src","http://openweathermap.org/img/wn/"+data.list[8].weather[0].icon+".png")
         $("#card-title-1").text(data.list[8].dt_txt)
