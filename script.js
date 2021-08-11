@@ -1,14 +1,3 @@
-// GIVEN a weather dashboard with form inputs
-
-// WHEN I view current weather conditions for that city
-// THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-
-// WHEN I view the UV index
-// THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-
-// WHEN I click on a city in the search history
-// THEN I am again presented with current and future conditions for that city
-
 //Search bar
 let searchEl 
 
@@ -32,11 +21,15 @@ fetch('https://api.openweathermap.org/data/2.5/forecast?q='+searchEl+'&units=imp
     })
 
     .then(function (data){
-        console.log(data);
-        // ///if statement for i down there
+        // console.log(data);
+        var cityLat = data.city.coord.lat
+        var cityLong = data.city.coord.lon
+
+        // alert(cityLat)
+        // alert(cityLong)
+
         // //////////DAY 0
         // console.log("Day 0----------------------------")
-
         console.log(data.list[0].dt_txt)
         //city
         console.log(data.city.name);
